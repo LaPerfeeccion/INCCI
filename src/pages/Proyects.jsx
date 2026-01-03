@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-import { brands } from '../assets/media/brands/brandsData.js';
+import { brands } from '../../public/assets/media/brands/brandsData';
 import { animate, stagger } from 'animejs';
 
 const PROJECTS_DATA = [
-  { title: 'Robótica Industrial', img: '/src/assets/media/rob.jpg', description: 'Soluciones avanzadas en automatización robótica para la industria moderna.' },
-  { title: 'Control de Procesos', img: '/src/assets/media/pro.jpg', description: 'Sistemas de control precisos para optimizar procesos industriales.' },
-  { title: 'Eficiencia Energética', img: '/src/assets/media/efi.jpg', description: 'Tecnologías para reducir el consumo energético y mejorar la sostenibilidad.' },
-  { title: 'Sistemas Embebidos', img: '/src/assets/media/sis.jpg', description: 'Desarrollo de sistemas embebidos personalizados para aplicaciones específicas.' },
-  { title: 'Automatización de Plantas', img: '/src/assets/media/aut.jpg', description: 'Automatización completa de plantas industriales para mayor productividad.' },
+  { title: 'Robótica Industrial', img: '/assets/media/rob.jpg', description: 'Soluciones avanzadas en automatización robótica para la industria moderna.' },
+  { title: 'Control de Procesos', img: '/assets/media/pro.jpg', description: 'Sistemas de control precisos para optimizar procesos industriales.' },
+  { title: 'Eficiencia Energética', img: '/assets/media/efi.jpg', description: 'Tecnologías para reducir el consumo energético y mejorar la sostenibilidad.' },
+  { title: 'Sistemas Embebidos', img: '/assets/media/sis.jpg', description: 'Desarrollo de sistemas embebidos personalizados para aplicaciones específicas.' },
+  { title: 'Automatización de Plantas', img: '/assets/media/aut.jpg', description: 'Automatización completa de plantas industriales para mayor productividad.' },
 ];
 
 export default function Projects() {

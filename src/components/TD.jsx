@@ -29,7 +29,7 @@ const TD = () => {
 
     const loader = new GLTFLoader();
     loader.load(
-      '/src/assets/3d/arcane.glb',
+      '/assets/3d/arcane.glb',
       function (gltf) {
         console.log('Modelo cargado correctamente');
         robot = gltf.scene;
