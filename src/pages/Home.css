@@ -1,0 +1,272 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* alto de toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.three-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-left {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+  padding: 4rem;
+}
+
+@media (max-width: 768px) {
+  .hero-left {
+    padding: 2rem;
+  }
+}
+/* WHO section */
+.who {
+  position: relative;
+  padding: 80px 6%;
+  background: linear-gradient(135deg, #0a0e27 0%, #050918 100%);
+  color: var(--fg);
+  border-top: 1px solid var(--border);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.who-inner {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.who-text h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--fg) 0%, var(--accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 20px 0;
+}
+
+.who-text p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 0 30px 0;
+}
+
+.who-logo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  filter: drop-shadow(0 8px 32px rgba(0, 207, 234, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.who-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Features list */
+.who-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(0, 26, 73, 0.733);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(0, 207, 234, 0.1);
+  transform: translateX(8px);
+}
+
+.feature-icon {
+  color: var(--accent);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature-text h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: var(--fg);
+}
+
+.feature-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Stats cards */
+.who-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.who-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 207, 234, 0.1);
+}
+
+.who-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(0, 207, 234, 0.2);
+  transform: translateY(-8px);
+}
+
+.who-card h3 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.who-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .who {
+    padding: 60px 6%;
+  }
+
+  .who-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .who-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .who-visual {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .who {
+    padding: 40px 4%;
+    min-height: auto;
+  }
+
+  .who-inner {
+    gap: 30px;
+  }
+
+  .who-text h2 {
+    font-size: 2rem;
+  }
+
+  .who-text p {
+    font-size: 1rem;
+  }
+
+  .who-features {
+    gap: 12px;
+  }
+
+  .feature-item {
+    padding: 12px;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .feature-icon {
+    font-size: 1.2rem;
+  }
+
+  .who-visual {
+    height: 250px;
+  }
+
+  .who-card {
+    padding: 20px;
+  }
+
+  .who-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left {
+    padding: 2rem;
+  }
+
+  .who {
+    padding: 30px 4%;
+  }
+
+  .who-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .who-text p {
+    font-size: 0.95rem;
+  }
+
+  .who-card {
+    padding: 15px;
+  }
+
+  .who-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .who-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+.home {
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    position: relative;
+    z-index: 2;
+}
